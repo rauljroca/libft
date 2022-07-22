@@ -3,31 +3,57 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rroca-go <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/06/18 14:21:11 by rroca-go         ###   ########.fr        #
+#    Updated: 2022/07/22 21:34:34 by rroca-go@st      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
-
-SRCS	= *.c
+SRCS	= ft_substr.c \
+			ft_isalpha.c \
+			ft_isdigit.c \
+			ft_isalnum.c \
+			ft_isprint.c \
+			ft_strlen.c \
+			ft_memset.c \
+			ft_bzero.c \
+			ft_memcpy.c \
 
 OBJS	= ${SRCS:.c=.o}
 
-NAME	= hellotest
+NAME	= libft.a
 
-RM  	= rm -f
+CC	= gcc
 
-all:	${OBJS}
-		cc -Wall -Werror -Wextra -o ${NAME} ${OBJS}
-		./${NAME}
+RM	= rm -f
+
+CFLAGS	= -Wall -Werror -Wextra -g
+
+.c.o:
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+
+${NAME}:	${OBJS}
+#	${CC} ${CFLAGS} -o ${NAME} ${OBJS}
+	@ar rc $(NAME) ${OBJS}
+	ranlib ${NAME}
+	${RM} ${OBJS}
+
+all:	${NAME}
+
+clean:
+	${RM} ${OBJS}
+
+fclean:	clean
+	${RM} ${NAME}
+
+re:	fclean all
+
+test: re
+	${CC} ${CFLAGS} ${SRCS} -L. -lft && ./a.out
 
 .PHONY:	all clean fclean re
 
-
-ar rc libstr.a maintest.o test.o
 
 
 
