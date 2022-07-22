@@ -13,6 +13,8 @@
 git push all master
 
 
-meto texto en 42
 
+acabo de borrar el texto de 42
+
+meto texto en mimac
 
