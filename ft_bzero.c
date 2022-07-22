@@ -10,13 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 #include <string.h>
 #include <stdio.h>
 
-void ft_bzero(void *s, size_t n) {
-
+void	ft_bzero(void *s, size_t n)
+{
 	size_t			i;
 	unsigned char	*buc;
 
@@ -28,7 +27,6 @@ void ft_bzero(void *s, size_t n) {
 		i++;
 	}
 	s = buc;
-
 }
 /*
 int	main(void)

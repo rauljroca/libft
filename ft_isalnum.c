@@ -10,15 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <unistd.h>
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_isalnum(int c) {
-
-	return ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122));
-
+int	ft_isalnum(int c)
+{
+	return (
+		(c >= 48 && c <= 57)
+		|| (c >= 65 && c <= 90)
+		|| (c >= 97 && c <= 122)
+	);
 }
 /*
 // gcc -Wall -Wextra -Werror ft_isalnum.c -L. -lft && ./a.out

@@ -10,15 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <unistd.h>
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_isalpha(int c) {
-
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
-
+int	ft_isalpha(int c)
+{
+	return (
+		(c >= 65 && c <= 90)
+		|| (c >= 97 && c <= 122)
+	);
 }
 /*
 // gcc -Wall -Wextra -Werror ft_isalpha.c -L. -lft && ./a.out

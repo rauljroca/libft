@@ -16,19 +16,13 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-
 	char	*rtn;
 
 	rtn = malloc(sizeof(char) * (1 + 1));
-
-	if (len && s) {
+	if (len && s)
 		start = 2;
-	}
-
 	return (rtn);
-
 }
-
 /*
 int	main(void)
 {

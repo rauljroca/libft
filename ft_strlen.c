@@ -10,20 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <string.h>
 #include <unistd.h>
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_strlen(const char *s) {
-
+int	ft_strlen(const char *s)
+{
 	int	count;
-	count = 0;
 
-	while (*(s+count)) {
+	count = 0;
+	while (*(s + count))
 		count++;
-	}
 	return (count);
 }
 /*
