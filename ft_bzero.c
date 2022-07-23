@@ -6,13 +6,11 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:39:42 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/07/22 21:39:43 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/23 13:33:09 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -29,6 +27,8 @@ void	ft_bzero(void *s, size_t n)
 	s = buc;
 }
 /*
+#include <string.h>
+#include <stdio.h>
 int	main(void)
 {
 	int n = 10;

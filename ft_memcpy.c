@@ -6,51 +6,51 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:35:28 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/07/22 21:35:29 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/23 14:24:49 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	size_t			i;
-	unsigned char	*buc;
+	char	*pointsrc;
+	char	*pointdst;
 
-	if (src)
-		i = 0;
-// https://github.com/rchallie/libft/blob/master/ft_memcpy.c
-// https://cdn.intra.42.fr/pdf/pdf/55911/es.subject.pdf
-	i = 0;
-	buc = (unsigned char *)dst;
-	while (i < n)
+	if (
+		(dst == src)
+		|| n == 0
+	)
+		return (0);
+	pointsrc = (char *)src;
+	pointdst = (char *)dst;
+	while (n)
 	{
-		buc[i] = 2;
-		i++;
+		pointdst[n-1] = pointsrc[n-1];
+		n--;
 	}
-	return (dst = buc);
+	return (dst);
 }
-
+/*
+#include <stdio.h>
+#include <string.h>
 int	main(void)
 {
-	int	n;
-	int	b[4];
-	int	a[2];
+	int	n = 4;
+	int	dst[] = {2, 4, 6, 8};
+	int	src[] = {10, 11, 12, 13};
 
-	n = 4;
 	for (int i = 0; i < n; i++)
 	{
-		printf("B1: %d \n", b[i]);
-		printf("A1: %d \n", a[i]);
+		printf("dst1: %d \t src1: %d \n", dst[i], src[i]);
 	}
-//	memcpy(b, a, 2);
-	ft_memcpy(b, a, 2);
+	printf("\n");
+//	memcpy(dst, src, 5);
+	ft_memcpy(dst, src, 5);
 	for (int i = 0; i < n; i++)
 	{
-		printf("B2: %d \n", b[i]);
-		printf("A2: %d \n", a[i]);
+		printf("dst2: %d \t src2: %d \n", dst[i], src[i]);
 	}
 	printf("\n");
 }
+*/

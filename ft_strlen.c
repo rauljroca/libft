@@ -6,13 +6,10 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:34:13 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/07/22 21:34:23 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/23 13:32:07 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_strlen(const char *s)
@@ -25,6 +22,9 @@ int	ft_strlen(const char *s)
 	return (count);
 }
 /*
+#include <string.h>
+#include <unistd.h>
+#include <stdio.h>
 int	main(void)
 {
 	char	c[] = "ABC";

@@ -6,7 +6,7 @@
 #    By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/07/22 21:34:34 by rroca-go@st      ###   ########.fr        #
+#    Updated: 2022/07/23 22:06:07 by rroca-go@st      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ SRCS	= ft_substr.c \
 			ft_memset.c \
 			ft_bzero.c \
 			ft_memcpy.c \
+			ft_memmove.c \
+			ft_strlcpy.c \
 
 OBJS	= ${SRCS:.c=.o}
 
@@ -49,12 +51,12 @@ fclean:	clean
 
 re:	fclean all
 
-test: re
+test: ${OBJS}
+	@ar rc $(NAME) ${OBJS}
+	ranlib ${NAME}
 	${CC} ${CFLAGS} ${SRCS} -L. -lft && ./a.out
 
 .PHONY:	all clean fclean re
-
-
 
 
 
@@ -108,6 +110,3 @@ test: re
 #${NAME}:	${OBJS}
 #		${CC} ${CFLAGS} -o ${NAME} ${OBJS}
 #all:	${NAME}
-
-
-

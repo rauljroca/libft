@@ -6,12 +6,10 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:33:19 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/07/22 21:33:49 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/23 22:07:05 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -24,6 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (rtn);
 }
 /*
+#include <unistd.h>
+#include <stdio.h>
 int	main(void)
 {
 	char s[] = "abcd";

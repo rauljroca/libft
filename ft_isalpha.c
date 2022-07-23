@@ -6,12 +6,10 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:38:22 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/07/22 21:38:24 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/23 13:32:47 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_isalpha(int c)
@@ -22,6 +20,8 @@ int	ft_isalpha(int c)
 	);
 }
 /*
+#include <unistd.h>
+#include <stdio.h>
 // gcc -Wall -Wextra -Werror ft_isalpha.c -L. -lft && ./a.out
 int	main(void)
 {

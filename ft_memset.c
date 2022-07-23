@@ -6,13 +6,11 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:34:51 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/07/22 21:34:52 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/23 13:32:16 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -29,6 +27,8 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b = buc);
 }
 /*
+#include <string.h>
+#include <stdio.h>
 int	main(void)
 {
 	int n = 10;
