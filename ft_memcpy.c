@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:35:28 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/07/23 14:24:49 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/25 00:47:31 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,21 @@
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	char	*pointsrc;
-	char	*pointdst;
+	char			*s1;
+	char			*s2;
+	unsigned int	i;
 
-	if (
-		(dst == src)
-		|| n == 0
-	)
-		return (0);
-	pointsrc = (char *)src;
-	pointdst = (char *)dst;
-	while (n)
+	s1 = (char *)dst;
+	s2 = (char *)src;
+	i = 0;
+	if (n == 0 || src == dst)
+		return (s1);
+	while (i < n)
 	{
-		pointdst[n-1] = pointsrc[n-1];
-		n--;
+		s1[i] = s2[i];
+		i++;
 	}
-	return (dst);
+	return (s1);
 }
 /*
 #include <stdio.h>

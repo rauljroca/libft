@@ -6,7 +6,7 @@
 #    By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/07/23 22:06:07 by rroca-go@st      ###   ########.fr        #
+#    Updated: 2022/07/25 00:27:00 by rroca-go@st      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,9 @@ SRCS	= ft_substr.c \
 			ft_memcpy.c \
 			ft_memmove.c \
 			ft_strlcpy.c \
+			ft_strlcat.c \
+			ft_toupper.c \
+			ft_tolower.c \
 
 OBJS	= ${SRCS:.c=.o}
 

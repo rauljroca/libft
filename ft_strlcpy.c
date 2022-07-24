@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 21:19:15 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/07/23 22:04:46 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/24 23:18:21 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,26 @@
 
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	size_t i;
-	size_t src_len;
+	unsigned int i;
+	unsigned int src_len;
 
-	i = 0;
-	if (!dst || !src)
+	src_len = 0;
+	if (!src)
 		return (0);
-	src_len = ft_strlen(src);
-	if (!dstsize)
-		return (src_len);
-	while (src[i] != '\0' && i < dstsize)
+	while (src[src_len] != 0)
 	{
-		dst[i] = src[i];
-		i++;
+		src_len++;
 	}
-	if (dstsize < src_len)
-		dst[dstsize - 1] = '\0';
-	else if (dstsize != 0)
+	if (dstsize > 0)
+	{
+		i = 0;
+		while (src[i] != 0 && i < (dstsize - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
 		dst[i] = '\0';
+	}
 	return (src_len);
 }
 /*
