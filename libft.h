@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
+/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 14:08:06 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/07/25 00:32:54 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/25 18:42:21 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		memcmp(const void *s1, const void *s2, size_t n);
 
 /*
-• strrchr
-• strncmp
-• memchr
 • memcmp
 • strnstr
 • atoi
@@ -46,7 +46,7 @@ Para implementar estas otras dos funciones, tendrás que utilizar malloc():
 • calloc
 • strdup
 
-bonus
+adicionales
 ft_substr
 ft_strjoin
 ft_strtrim
@@ -58,6 +58,16 @@ ft_putchar_fd
 ft_putstr_fd
 ft_putendl_fd
 ft_putnbr_fd
+
+bonus
+ft_lstnew
+ft_lstadd_front
+ft_lstsize
+ft_lstlast
+ft_lstadd_back
+ft_lstdelone
+ft_lstclear
+ft_lstiter
 
 */
 

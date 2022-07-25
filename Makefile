@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+         #
+#    By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/07/25 00:27:00 by rroca-go@st      ###   ########.fr        #
+#    Updated: 2022/07/25 18:04:17 by rroca-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,8 @@ SRCS	= ft_substr.c \
 			ft_tolower.c \
 			ft_strchr.c \
 			ft_strrchr.c \
+			ft_strncmp.c \
+			ft_memchr.c \
 
 OBJS	= ${SRCS:.c=.o}
 
