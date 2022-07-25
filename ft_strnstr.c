@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 20:02:52 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/07/25 20:21:59 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/07/26 00:46:58 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,41 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	unsigned char	*ss1;
-	unsigned char	*ss2;
-	size_t			i;
-	size_t			j;
+	unsigned long	i;
+	int				j;
 
-	ss1 = (unsigned char *)haystack;
-	ss2 = (unsigned char *)needle;
-	i = 0;
 	j = 0;
-	if (len == 0)
-		return (0);
-	while ((ss1[i] == ss2[i] && ss1[i] != '\0') && i < len)
-		i++;
-	if (i == len)
-		i--;
-	j = ss1[i] - ss2[i];
-	return (j);
+	i = 0;
+	if (!*needle)
+		return ((char *)haystack);
+	while (haystack[i])
+	{
+		j = 0;
+		while (haystack[i] == needle[j] && haystack[i] && i < len)
+		{
+			i++;
+			j++;
+		}
+		if (!needle[j])
+			return ((char *)&haystack[i - j]);
+		i = (i - j) + 1;
+	}
+	return (NULL);
 }
-
+/*
 #include <string.h>
 #include <stdio.h>
 int	main(void)
 {
-	const char *largestring = "Foo Bar Baz";
-	const char *smallstring = "Bar";
+	const	char *largestring = "Foo Bar Baz";
+	const	char *smallstring = "Bar";
+	size_t	len = 8;
 	char *ptr;
+	char *ptr2;
 
-	ptr = strnstr(largestring, smallstring, 8);
-	printf("ptr: %s \n", ptr);
+	ptr = strnstr(largestring, smallstring, len);
+	ptr2 = ft_strnstr(largestring, smallstring, len);
+	printf("\nstrnstr is  \t%s \n", ptr);
+	printf("\nft_strnstr is\t%s \n", ptr2);
 }
+*/
