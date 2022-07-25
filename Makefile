@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+         #
+#    By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/07/25 20:03:09 by rroca-go         ###   ########.fr        #
+#    Updated: 2022/07/26 01:17:24 by rroca-go@st      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ SRCS	= ft_substr.c \
 			ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isalnum.c \
+			ft_isascii.c \
 			ft_isprint.c \
 			ft_strlen.c \
 			ft_memset.c \
