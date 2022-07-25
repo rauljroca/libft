@@ -41,7 +41,6 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src,
 	return (srclen + dstsize);
 }
 /*
-
 #include <stdio.h>
 #include <string.h>
 int	main(void)
