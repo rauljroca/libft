@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 22:33:43 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/07/25 00:05:10 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/26 01:25:45 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,22 @@
 size_t	ft_strlcat(char *restrict dst, const char *restrict src,
 		size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	dstlen;
-	unsigned int	srclen;
+	size_t	len;
+	size_t	i;
 
+	len = 0;
 	i = 0;
-	dstlen = 0;
-	srclen = 0;
-	if (dstsize == 0)
-		return (0);
-	while (dst[dstlen] != '\0')
-		dstlen++;
-	while (src[srclen] != '\0')
-		srclen++;
-	if (dstsize > dstlen)
+	while (dst[i] && i < dstsize)
+		i++;
+	len = i;
+	while (src[i - len] && i + 1 < dstsize)
 	{
-		while (i < dstsize - dstlen - 1 && src[i] != '\0')
-		{
-			dst[dstlen + i] = src[i];
-			i++;
-		}
-		dst[dstlen + i] = '\0';
-		return (dstlen + srclen);
+		dst[i] = src[i - len];
+		i++;
 	}
-	return (srclen + dstsize);
+	if (len < dstsize)
+		dst[i] = '\0';
+	return (len + ft_strlen(src));
 }
 /*
 #include <stdio.h>

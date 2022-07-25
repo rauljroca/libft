@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 14:08:06 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/07/25 20:03:00 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/07/26 01:26:28 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 /*
-• strnstr
 • atoi
 
 Para implementar estas otras dos funciones, tendrás que utilizar malloc():
