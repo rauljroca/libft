@@ -6,7 +6,7 @@
 #    By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/07/25 18:46:15 by rroca-go         ###   ########.fr        #
+#    Updated: 2022/07/25 20:03:09 by rroca-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS	= ft_substr.c \
 			ft_strncmp.c \
 			ft_memchr.c \
 			ft_memcmp.c \
+			ft_strnstr.c \
 
 OBJS	= ${SRCS:.c=.o}
 
