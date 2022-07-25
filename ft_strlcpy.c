@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	unsigned int i;
-	unsigned int src_len;
+	unsigned int	i;
+	unsigned int	src_len;
 
 	src_len = 0;
 	if (!src)
