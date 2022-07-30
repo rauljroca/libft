@@ -6,7 +6,7 @@
 /*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 14:08:06 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/07/30 17:13:07 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/07/30 18:44:09 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 
 /*
 
 Para implementar estas otras dos funciones, tendrás que utilizar malloc():
-• calloc
 • strdup
 
 adicionales
