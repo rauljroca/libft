@@ -3,38 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
+/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 21:19:15 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/07/24 23:18:21 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/30 16:55:52 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	src_len;
+	size_t	i;
 
-	src_len = 0;
-	if (!src)
-		return (0);
-	while (src[src_len] != 0)
-	{
-		src_len++;
-	}
+	i = 0;
 	if (dstsize > 0)
 	{
-		i = 0;
-		while (src[i] != 0 && i < (dstsize - 1))
+		while (src[i] && i < (dstsize - 1))
 		{
 			dst[i] = src[i];
 			i++;
 		}
-		dst[i] = '\0';
+		dst[i] = 0;
 	}
-	return (src_len);
+	while (src[i])
+		i++;
+	return (i);
 }
 /*
 #include <stdio.h>
@@ -46,7 +40,8 @@ int	main(void)
 
 	printf("src1: %s \t dst1: %s \n", src, dst);
 //	strlcpy(dst, src, 4); //dst2: ABC
-	ft_strlcpy(dst, src, 4);
+//	ft_strlcpy(dst, src, 4);
+	strlcpy(((void *)0), ((void *)0), 10);
 	printf("src2: %s \t dst2: %s \n", src, dst);
 }
 */
