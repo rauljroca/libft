@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
+/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 22:33:43 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/07/26 01:25:45 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/30 12:46:14 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src,
-		size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	len;
 	size_t	i;
@@ -41,7 +40,7 @@ int	main(void)
     char src[4] = "end.";
 
     printf("dst1: %s \n src1: %s \n",dst,src);
-    strlcat(dst, src, 12);
+    ft_strlcat(dst, src, 12);
     printf("dst2: %s \n",dst);
 
     return(0);

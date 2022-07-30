@@ -3,15 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+         #
+#    By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/07/26 01:17:24 by rroca-go@st      ###   ########.fr        #
+#    Updated: 2022/07/30 15:55:35 by rroca-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= ft_substr.c \
-			ft_isalpha.c \
+SRCS	= ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isalnum.c \
 			ft_isascii.c \
@@ -31,6 +30,7 @@ SRCS	= ft_substr.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_strnstr.c \
+			ft_atoi.c \
 
 OBJS	= ${SRCS:.c=.o}
 
