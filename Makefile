@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+         #
+#    By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/07/30 18:44:21 by rroca-go         ###   ########.fr        #
+#    Updated: 2022/07/31 14:28:13 by rroca-go@st      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRCS	= ft_isalpha.c \
 			ft_atoi.c \
 			ft_calloc.c \
 			ft_strdup.c \
+			ft_substr.c \
 
 OBJS	= ${SRCS:.c=.o}
 
