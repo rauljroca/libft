@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 14:08:06 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/07/31 14:21:18 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/07/31 20:13:07 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,11 @@ int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 /*
-
-Para implementar estas otras dos funciones, tendrás que utilizar malloc():
-• strdup
-
 adicionales
-ft_substr
+
 ft_strjoin
 ft_strtrim
 ft_split
