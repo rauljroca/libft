@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 14:24:19 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/01 00:20:33 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/01 19:38:42 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,10 @@ int	main(void)
 	free(ret);
 	printf("TEST_FAILED \n");
 }
+*/
+/*
+Descripción
+Reserva (con malloc(3)) y devuelve una substring de la string ’s’.
+La substring empieza desde el índice ’start’ y tiene una longitud
+máxima ’len’.
 */
