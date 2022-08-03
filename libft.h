@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 14:08:06 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/08/01 19:19:54 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/03 23:24:40 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,14 @@ char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 
 /*
 adicionales
 
-ft_strtrim
 ft_split
+
 ft_itoa
 ft_strmapi
 ft_striteri
