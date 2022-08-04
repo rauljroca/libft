@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 22:18:16 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/04 23:21:18 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/04 23:31:09 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	char	*str;
+	unsigned int	i;
+	char			*str;
 
 	if (!s)
 		return (NULL);
@@ -31,22 +31,22 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
+/*
 #include <stdio.h>
-char my_func(unsigned int i, char str)
+char the_function(unsigned int i, char str)
 {
-	printf("My inner function: index = %d and %c\n", i, str);
-	return str - 32;
+	printf("Dentro de mi función: %c es index %d\n", str, i);
+	return (str - 32);
 }
 int	main(void)
 {
 	char str[10] = "hello.";
-	printf("The result is %s\n", str);
-	char *result = ft_strmapi(str, my_func);
-	printf("The result is %s\n", result);
+	printf("Antes de ft_strmapi: %s\n", str);
+	char *rst = ft_strmapi(str, the_function);
+	printf("Después de ft_strmapi: %s\n", rst);
 	return 0;
 }
-
+*/
 /*
 Parámetros
 s: La string que iterar.

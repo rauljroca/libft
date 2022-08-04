@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 19:21:47 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/04 23:17:18 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/04 23:35:12 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-	ptr = malloc(ft_strlen(s1) * sizeof(char) + 1);
+	ptr = (char *)malloc(ft_strlen(s1) * sizeof(char) + 1);
 	if (!ptr)
-	{
 		return (NULL);
-		free(ptr);
-	}
 	while (ft_strchr(set, *s1) && *s1 != '\0')
 		s1++;
 	if (*s1 == '\0')

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 17:05:02 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/07/30 18:22:33 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/04 23:31:53 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t count, size_t size)
 	i = 0;
 	if (count * size)
 	{
-		ptr = (void *)malloc(count * size);
+		ptr = (char *)malloc(count * size);
 		if (!ptr)
 		{
 			return (NULL);

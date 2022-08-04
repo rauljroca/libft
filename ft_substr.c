@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 14:24:19 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/01 19:38:42 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/04 23:32:21 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	slen = ft_strlen(s);
 	if (start > slen)
 		return (ft_strdup(""));
-	ptr = malloc(len * sizeof(char) + 1);
+	ptr = (char *)malloc(len * sizeof(char) + 1);
 	if (!ptr)
 		return (NULL);
 	i = 0;
