@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 19:21:47 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/01 21:22:37 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/04 23:17:18 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ int	main(void)
 {
 	char *s1 = "BBsequeda!ABC";
 	char *set = "ABC";
-	char *pointer = ft_strtrim(s1, set);
-	printf("ft_strjoin %s + %s = %s \n", s1, set, pointer);
+	char *pnt = ft_strtrim(s1, set);
+	printf("ft_strjoin %s + %s = %s \n", s1, set, pnt);
 }
 
 Valor devuelto
