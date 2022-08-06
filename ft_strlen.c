@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
+/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:34:13 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/07/23 13:32:07 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/06 20:06:22 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	ft_strlen(const char *s)
 {
-	int	count;
+	size_t	i;
 
-	count = 0;
-	while (*(s + count))
-		count++;
-	return (count);
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
 /*
 #include <string.h>
@@ -39,4 +39,5 @@ int	main(void)
 	char	c4[] = " ";
 	printf("%s -> %d - lenght \n", c4, ft_strlen(c4));
 	printf("%s -> %lu - strlen \n", c4, strlen(c4));	
-}*/
+}
+*/

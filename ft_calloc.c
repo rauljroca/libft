@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
+/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 17:05:02 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/08/04 23:31:53 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/06 19:49:14 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,26 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*ptr;
+	char	*pointer;
 	size_t	i;
 
-	i = 0;
-	if (count * size)
+	if (count * size == 0)
+		return (malloc(0));
+	if (SIZE_MAX / size < count)
+		return (NULL);
+	pointer = (void *)malloc(count * size);
+	if (!pointer)
 	{
-		ptr = (char *)malloc(count * size);
-		if (!ptr)
-		{
-			return (NULL);
-			free(ptr);
-		}
-		while (i < (count * size))
-		{
-			ptr[i] = 0;
-			i++;
-		}
-		return (ptr);
+		return (NULL);
+		free(pointer);
 	}
-	return (malloc(size));
+	i = 0;
+	while (i < (count * size))
+	{
+		pointer[i] = 0;
+		i++;
+	}
+	return (pointer);
 }
 /*
 #include <stdio.h>
@@ -69,4 +69,5 @@ int	main(void)
 
         return 0;
 }
+
 */

@@ -3,42 +3,94 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
+/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 21:35:30 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/03 23:22:47 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/06 22:09:09 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-/*
-char	**ft_split(char const *s, char c)
-{
-	char	**arrayofstrings;
-	int		i;
-	int		j;
 
-	printf("part = \n");
-//	char **arrayofstrings2[] = {"AAA", "BBBBB", "BBBBB", "BBBBB"};
+static size_t	ft_numstring(const char *s, char c)
+{
+	size_t	i;
+	size_t	mark;
+
 	i = 0;
-	j = 0;
+	mark = 0;
 	if (!s)
-		return (NULL);
-	while (*(s + i))
-		if (c == *(s + i))
+		return (0);
+	while (*s != '\0')
+	{
+		if (*s == c)
+			mark = 0;
+		else if (mark == 0)
+		{
+			mark = 1;
 			i++;
-	arrayofstrings = (char **)malloc(sizeof(char) * (i + 1));
-//	*arrayofstrings = arrayofstrings2;
-	return (arrayofstrings);
+		}
+		s++;
+	}
+	return (i);
 }
 
+static size_t	ft_numchar(const char *s, char c)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] != c && s[i] != '\0')
+		i++;
+	return (i);
+}
+
+static char	**ft_free_split(const char **split, size_t len_split)
+{
+	while (len_split--)
+		free((void *)split[len_split]);
+	free(split);
+	return (NULL);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	/*
+	char	**split;
+	size_t	len;
+	size_t	i;
+	size_t	sl;
+
+	i = 0;
+	sl = 0;
+	len = ft_numstring(s, c);
+	split = (char **)malloc(sizeof(char *) * (len + 1));
+	if (!split)
+		return (NULL);
+	while (i < len)
+	{
+		while (*s == c)
+			s++;
+		sl = ft_numchar((const char *)s, c);
+		split[i] = (char *)malloc(sizeof(char) * sl + 1);
+		if (!split[i])
+			return (ft_free_split((const char **)split, len));
+		ft_strlcpy(split[i], s, sl + 1);
+		s = (ft_strchr(s, (int)c));
+		i++;
+	}
+	split[i] = 0;
+	return (split);
+	*/
+}
+/*
 int	main(void)
 {
 	char **dest;
-	char P[] = "   hola papu que  tal   ";
+	char P[] = "   hello word   ";
 	char U = ' ';
-	int	i = 0;
+	size_t	i = 0;
 
 	printf("part = \n");
 
@@ -46,11 +98,10 @@ int	main(void)
 	printf("%c \n \n ", U);
 	dest = ft_split(P, U);
 
-	printf("part = %d -> %c \n", i, **dest);
-
+	printf("part = %zu -> %c \n", i, **dest);
 
 	while (dest[i++])
-		printf("part = %d -> %s \n", i, dest[i]);
+		printf("part = %zu -> %s \n", i, dest[i]);
 }
 
 Valor devuelto

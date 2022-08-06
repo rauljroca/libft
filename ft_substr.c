@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
+/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 14:24:19 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/04 23:32:21 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/06 21:34:52 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,51 +15,41 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*ptr;
-	size_t			i;
-	unsigned int	slen;
+	char	*pointer;
+	size_t	dimension;
 
 	if (!s)
 		return (NULL);
-	if (*s == '\0')
+	dimension = ft_strlen(s);
+	if (start > dimension || dimension == 0)
 		return (ft_strdup(""));
-	slen = ft_strlen(s);
-	if (start > slen)
-		return (ft_strdup(""));
-	ptr = (char *)malloc(len * sizeof(char) + 1);
-	if (!ptr)
+	s += start;
+	dimension -= start;
+	if (dimension > len)
+		dimension = len;
+	pointer = (void *)malloc(sizeof(char) * (dimension + 1));
+	if (!pointer)
 		return (NULL);
-	i = 0;
-	while (i < len)
+	len = dimension;
+	while (dimension)
 	{
-		*(ptr + i) = *(s + start);
-		i++;
-		start++;
+		*(pointer++) = *(s++);
+		--dimension;
 	}
-	*(ptr + len) = '\0';
-	return (ptr);
+	*pointer = '\0';
+	return (pointer - len);
 }
 /*
 #include <stdio.h>
 #include <string.h>
 int	main(void)
 {
-//	char *s = "ABCDEFGHIJK";
-	char *s = "i just want this part #############";
-	size_t	size = 22;
-	printf("ft_substr debería ser BCD --> %s \n", ft_substr(s, 0, size));
-
-	char *ret = ft_substr(s, 0, size);
-	if (!strncmp(ret, s, size))
-	{
-		free(ret);
-		printf("TEST_SUCCESS \n");
-	}
-	free(ret);
-	printf("TEST_FAILED \n");
+	char str[20] = "This is string.";
+	char *result = ft_substr(str, 9, 2);
+	printf("The  result is %s\n", result);
+	return 0;
 }
-*/
-/*
+
 Descripción
 Reserva (con malloc(3)) y devuelve una substring de la string ’s’.
 La substring empieza desde el índice ’start’ y tiene una longitud

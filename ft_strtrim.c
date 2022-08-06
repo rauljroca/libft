@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
+/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 19:21:47 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/04 23:35:12 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/06 21:51:46 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,24 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	len;
-	char	*ptr;
+	char		*pointer;
+	size_t		dimension;
 
 	if (!s1 || !set)
 		return (NULL);
-	ptr = (char *)malloc(ft_strlen(s1) * sizeof(char) + 1);
-	if (!ptr)
-		return (NULL);
-	while (ft_strchr(set, *s1) && *s1 != '\0')
+	while (*s1 != '\0' && ft_strchr(set, *s1))
 		s1++;
-	if (*s1 == '\0')
-		return (ft_strdup(""));
-	len = ft_strlen(s1);
-	while (ft_strchr(set, s1[len]))
-		len--;
-	ptr = ft_substr(s1, 0, len + 1);
-	return (ptr);
+	dimension = ft_strlen(s1);
+	if (dimension > 0)
+	{
+		while (ft_strchr(set, s1[dimension - 1]))
+			--dimension;
+	}
+	pointer = (void *)malloc(sizeof(char) * (dimension + 1));
+	if (!pointer)
+		return (NULL);
+	ft_strlcpy(pointer, s1, dimension + 1);
+	return (pointer);
 }
 /*
 #include <stdio.h>
