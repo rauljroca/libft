@@ -3,24 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 00:47:43 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/06 22:06:46 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/08 00:55:27 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
+#include <stdio.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
-/*
 	long	r;
+	char	nbr;
 
 	r = n;
 	if (r < 0)
 	{
-		ft_putchar_fd('-', fd);
+		write (fd, "-", 1);
 		r = r * -1;
 	}
 	if (r >= 10)
@@ -30,30 +32,15 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else
 	{
-		ft_putchar_fd(r + '0', fd);
+		nbr = r + '0';
+		write (fd, &nbr, 1);
 	}
-*/
 }
 /*
-// write (fd, &c, 1);
-#include <unistd.h>
-#include <stdio.h>
 int	main(void)
 {
-	int nbr0 = -42;
-//	int nbr1 = 1;
-//	int nbr2 = 46;
-//	int nbr3 = 80000;
-
-	ft_putnbr_fd(nbr0, 1);
+	ft_putnbr_fd(-42, 1);
 	write(1, "\n \n", 1);
-//	ft_putnbr_fd(nbr1, 1);
-//	write(1, "\n \n", 1);
-//	ft_putnbr_fd(nbr2, 1);
-//	write(1, "\n \n", 1);
-//	ft_putnbr_fd(nbr3, 1);
-//	write(1, "\n \n", 1);
-
 	return (0);
 }
 
