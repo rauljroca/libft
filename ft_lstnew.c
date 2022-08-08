@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 01:17:39 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/08 22:55:10 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/08 23:00:55 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list	*ft_lstnew(void *content)
 	newlist->next = NULL;
 	return (newlist);
 }
-
+/*
 #include <unistd.h>
 #include <stdio.h>
 int	main(void)
@@ -38,7 +38,7 @@ int	main(void)
 	printf("Tamaño = %zu \n", sizeof(result->content));
 	return 0;
 }
-/*
+
 Parámetros content:
 el contenido con el que crear el nodo.
 Valor devuelto

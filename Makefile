@@ -6,7 +6,7 @@
 #    By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/08/08 22:56:34 by rroca-go@st      ###   ########.fr        #
+#    Updated: 2022/08/08 23:04:00 by rroca-go@st      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ SRCS	= ft_isalpha.c \
 
 OBJS	= ${SRCS:.c=.o}
 
-SRCB	= ft_lstnew
+SRCB	= ft_lstnew.c
 
 OBJB	= ${SRCB:.c=.o}
 
@@ -65,14 +65,12 @@ CFLAGS	= -Wall -Werror -Wextra -g
 ${NAME}:	${OBJS}
 	@ar rc $(NAME) ${OBJS}
 	ranlib ${NAME}
-	${RM} ${OBJS}
 
 all:	${NAME}
 
-bonus:	${OBJS} ${OBJB}
-	ar rc  ${NAME} ${OBJB}
+bonus:	${OBJB}
+	@ar rc ${NAME} ${OBJB}
 	ranlib ${NAME}
-	${RM} ${OBJS} ${OBJB}
 
 clean:
 	${RM} ${OBJS} ${OBJB}
@@ -87,9 +85,7 @@ test: ${OBJS}
 	ranlib ${NAME}
 	${CC} ${CFLAGS} ${SRCS} -L. -lft && ./a.out
 
-.PHONY:	all clean fclean re
-
-
+.PHONY:	all clean fclean re bonus
 
 
 # crear biblioteca
@@ -99,45 +95,3 @@ test: ${OBJS}
 # crear index en biblioteca
 #ranlib libstr.a
 
-
-
-
-#SRCS	= test.c
-#OBJS	= ${SRCS:.c=.o}
-#NAME	= hellotest
-#CC 		= cc
-#RM  	= rm -f
-#CFLAGS	=	-Wall -Wextra -Werror
-#.c.o:
-#		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
-#${NAME}:${OBJS}
-#		${CC} -o ${NAME} ${OBJS}
-#		echo name
-#all:	${NAME}
-#		echo all
-#clean:	${OBJS}
-#		${RM} ${OBJS}
-#fclean:	clean
-#		${RM} ${NAME}
-#re: 	fclean all
-#.PHONY:	all clean fclean re
-
-
-
-#SRCS	= test.c
-#OBJS	= ${SRCS:.c=.o}
-#hellotest:	${OBJS}
-#		gcc -Wall -Wextra -Werror -o hellotest ${OBJS}
-
-
-
-#SRCS	= test.c 
-#OBJS	= ${SRCS:.c=.o}
-#NAME	= hellotest
-#CC		= gcc
-#CFLAGS	= -Wall -Wextra -Werror -g
-#.c.o:
-#		${CC} ${CFLAGS} -c &< -o &{<:.c=.o}
-#${NAME}:	${OBJS}
-#		${CC} ${CFLAGS} -o ${NAME} ${OBJS}
-#all:	${NAME}
