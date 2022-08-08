@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+         #
+#    By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/08/06 15:46:28 by rroca-go         ###   ########.fr        #
+#    Updated: 2022/08/08 22:56:34 by rroca-go@st      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,9 +43,13 @@ SRCS	= ft_isalpha.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c \
+			ft_putnbr_fd.c
 
 OBJS	= ${SRCS:.c=.o}
+
+SRCB	= ft_lstnew
+
+OBJB	= ${SRCB:.c=.o}
 
 NAME	= libft.a
 
@@ -59,15 +63,19 @@ CFLAGS	= -Wall -Werror -Wextra -g
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-#	${CC} ${CFLAGS} -o ${NAME} ${OBJS}
 	@ar rc $(NAME) ${OBJS}
 	ranlib ${NAME}
 	${RM} ${OBJS}
 
 all:	${NAME}
 
+bonus:	${OBJS} ${OBJB}
+	ar rc  ${NAME} ${OBJB}
+	ranlib ${NAME}
+	${RM} ${OBJS} ${OBJB}
+
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${OBJB}
 
 fclean:	clean
 	${RM} ${NAME}
