@@ -1,52 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 01:17:39 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/09 23:34:45 by rroca-go@st      ###   ########.fr       */
+/*   Created: 2022/08/08 23:06:22 by rroca-go@st       #+#    #+#             */
+/*   Updated: 2022/08/09 23:33:49 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*newlist;
-
-	newlist = (void *)malloc(sizeof(t_list));
-	if (!newlist)
+	if (lst && new)
 	{
-		return (NULL);
-		free(newlist);
+		new->next = *lst;
+		*lst = new;
 	}
-	newlist->content = content;
-	newlist->next = NULL;
-	return (newlist);
 }
 /*
-#include <unistd.h>
 #include <stdio.h>
 int	main(void)
 {
-	char content[] = "Texto enviado a la lista.";
+	t_list	*newlist1 = (void *)malloc(sizeof(t_list));
+	t_list	*newlist2 = (void *)malloc(sizeof(t_list));
 
-	t_list *result = ft_lstnew((void *)content);
+	newlist1->content = "abc";
+	newlist2->content = "XYZ";
+
+	char content[] = "Texto enviado a la lista.";
+	t_list *result = ft_lstadd_front(newlist2, newlist1);
+
 	printf("Contenido = %s \n", (char *)result->content);
 	printf("Tamaño = %zu \n", sizeof(result->content));
 	return 0;
 }
 
-Parámetros content:
-el contenido con el que crear el nodo.
+Parámetros
+lst: la dirección de un puntero al primer nodo de una lista.
+new: un puntero al nodo que añadir al principio de la lista.
 Valor devuelto
-El nuevo nodo
-Funciones autorizadas
-malloc
+Nada
 Descripción
-Crea un nuevo nodo utilizando malloc(3). La variable miembro ’content’ 
-se inicializa con el contenido del parámetro ’content’. La variable
-’next’, con NULL.
+Añade el nodo ’new’ al principio de la lista ’lst’.
 */

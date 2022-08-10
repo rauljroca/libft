@@ -6,7 +6,7 @@
 #    By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/08/08 23:04:00 by rroca-go@st      ###   ########.fr        #
+#    Updated: 2022/08/08 23:06:42 by rroca-go@st      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,8 @@ SRCS	= ft_isalpha.c \
 
 OBJS	= ${SRCS:.c=.o}
 
-SRCB	= ft_lstnew.c
+SRCB	= ft_lstnew.c \
+			ft_lstadd_front.c
 
 OBJB	= ${SRCB:.c=.o}
 
