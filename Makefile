@@ -6,7 +6,7 @@
 #    By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/08/24 17:24:54 by rroca-go         ###   ########.fr        #
+#    Updated: 2022/08/24 19:08:52 by rroca-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,8 @@ SRCB	= ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
-			ft_lstadd_back.c
+			ft_lstadd_back.c \
+			ft_lstdelone.c
 
 OBJB	= ${SRCB:.c=.o}
 
