@@ -6,7 +6,7 @@
 #    By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/08/24 11:50:49 by rroca-go         ###   ########.fr        #
+#    Updated: 2022/08/24 14:36:47 by rroca-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,8 @@ OBJS	= ${SRCS:.c=.o}
 
 SRCB	= ft_lstnew.c \
 			ft_lstadd_front.c \
-			ft_lstsize.c
+			ft_lstsize.c \
+			ft_lstlast.c
 
 OBJB	= ${SRCB:.c=.o}
 
