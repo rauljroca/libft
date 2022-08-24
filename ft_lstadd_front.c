@@ -6,7 +6,7 @@
 /*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 23:06:22 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/24 11:51:37 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/24 17:13:52 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int	main(void)
 	t_list	*newlist3;
 
 	newlist1 = (void *)malloc(sizeof(t_list));
-	newlist3 = (void *)malloc(sizeof(t_list));
-
+	if(!(newlist3 = (void *)malloc(sizeof(t_list))))
+		return (0);
 	newlist1->content = "abc";
 	newlist2.content = "XYZa";
 
