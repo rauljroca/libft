@@ -6,7 +6,7 @@
 /*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 23:06:22 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/24 11:41:02 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/24 11:51:37 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		*lst = new;
 	}
 }
-
+/*
 #include <stdio.h>
 int	main(void)
 {
@@ -46,7 +46,7 @@ int	main(void)
 //	printf("Contenido = %s \n", (char *)result2->content);
 //	char content[] = "Texto enviado a la lista.";
 }
-/*
+
 Parámetros
 lst: la dirección de un puntero al primer nodo de una lista.
 new: un puntero al nodo que añadir al principio de la lista.
