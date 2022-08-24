@@ -6,7 +6,7 @@
 /*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 14:08:06 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/08/24 14:37:02 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/24 17:25:32 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,19 +61,14 @@ t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 /*
-
 bonus
-ft_lstnew
-ft_lstadd_front
-ft_lstsize
-ft_lstlast
 ft_lstadd_back
 ft_lstdelone
 ft_lstclear
 ft_lstiter
-
 */
 
 #endif
