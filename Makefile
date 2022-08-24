@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+         #
+#    By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/08/08 23:06:42 by rroca-go@st      ###   ########.fr        #
+#    Updated: 2022/08/24 11:50:49 by rroca-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ SRCS	= ft_isalpha.c \
 OBJS	= ${SRCS:.c=.o}
 
 SRCB	= ft_lstnew.c \
-			ft_lstadd_front.c
+			ft_lstadd_front.c \
+			ft_lstsize.c
 
 OBJB	= ${SRCB:.c=.o}
 
