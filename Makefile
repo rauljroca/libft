@@ -6,7 +6,7 @@
 #    By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/08/25 18:15:37 by rroca-go         ###   ########.fr        #
+#    Updated: 2022/08/25 20:14:31 by rroca-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,8 @@ SRCB	= ft_lstnew.c \
 			ft_lstadd_back.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
-			ft_lstiter.c
+			ft_lstiter.c \
+			ft_lstmap.c
 
 OBJB	= ${SRCB:.c=.o}
 
@@ -87,13 +88,7 @@ fclean:	clean
 
 re:	fclean all
 
-test: ${OBJS}
-	@ar rc $(NAME) ${OBJS}
-	ranlib ${NAME}
-	${CC} ${CFLAGS} ${SRCS} -L. -lft && ./a.out
-
 .PHONY:	all clean fclean re bonus
-
 
 # crear biblioteca
 #ar rc libstr.a maintest.o test.o
@@ -101,4 +96,3 @@ test: ${OBJS}
 #gcc -Wall -Wectra -Werror maintes.o -L. -lstr
 # crear index en biblioteca
 #ranlib libstr.a
-
