@@ -6,7 +6,7 @@
 /*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 19:03:40 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/08/25 14:50:16 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/25 16:34:08 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	free(lst);
 }
 /*
+// MAIN IN PROGRESS
 #include <stdio.h>
 void the_function(del)
 {
