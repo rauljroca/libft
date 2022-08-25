@@ -6,11 +6,12 @@
 /*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:36:26 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/08/24 17:39:47 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/25 13:34:59 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)

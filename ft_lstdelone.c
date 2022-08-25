@@ -6,28 +6,40 @@
 /*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 19:03:40 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/08/24 19:38:01 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/25 14:50:16 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	
+	if (!lst || !del)
+		return ;
+	if (del)
+		del(lst->content);
+	free(lst);
 }
-
+/*
 #include <stdio.h>
-void the_function(unsigned int i, char *str)
+void the_function(del)
 {
-	printf("Dentro de mi función: %c es index %d\n", *str, i);
+	free(&del);
 }
 int	main(void)
 {
-	char str[10] = "hello.";
-	printf("Antes de ft_striteri: %s\n", str);
-	ft_striteri(str, the_function);
-	return 0;
+	t_list	*newlist1;
+	if(!(newlist1 = (void *)malloc(sizeof(t_list))))
+		return (0);
+	newlist1->content = "000";
+	printf("Tamaño = %lu \n", sizeof(newlist1->content));
+	printf("Result = %s \n", (char *)newlist1->content);
+	ft_lstdelone(newlist1, the_function);
+	printf("Tamaño = %lu \n", sizeof(newlist1->content));
+	printf("Result = %s \n", (char *)newlist1->content);
+	return (0);
 }
-/*
+
 Parámetros
 lst: el nodo a liberar.
 del: un puntero a la función utilizada para liberar el contenido del nodo.
