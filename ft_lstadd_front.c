@@ -6,12 +6,18 @@
 /*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 23:06:22 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/24 17:13:52 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/25 18:23:47 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Adds a new element to the beginning of a list.
+ * 
+ * @param lst A pointer to a pointer to a linked list.
+ * @param new the new element to add to the list
+ */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst && new)
