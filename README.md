@@ -2,6 +2,7 @@
 
 - [Makefile](Makefile)
 - [libft.h](libft.h)
+
 ## CHAR
 #### Classification
 - [ft_isalpha.c](ft_isalpha.c)
@@ -12,6 +13,8 @@
 #### Manipulation
 - [ft_toupper.c](ft_toupper.c)
 - [ft_tolower.c](ft_tolower.c)
+- [ft_split.c](ft_split.c) - char	**ft_split(const char *s, char c)
+
 ## STRING
 #### Examination
 - [ft_strlen.c](ft_strlen.c)
@@ -23,9 +26,23 @@
 - [ft_strlcpy.c](ft_strlcpy.c)
 - [ft_strlcat.c](ft_strlcat.c)
 - [ft_strdup.c](ft_strdup.c)
-## Conversion to numeric format
+- [ft_strmapi.c](ft_strmapi.c) - char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+- [ft_striteri.c](ft_striteri.c) - void ft_striteri(char *s, void (*f)(unsigned int, char*))
+- [ft_substr.c](ft_substr.c) - char	*ft_substr(char const *s, unsigned int start, size_t len)
+- [ft_strjoin.c](ft_strjoin.c) - char	*ft_strjoin(char const *s1, char const *s2)
+- [ft_strtrim.c](ft_strtrim.c) - char	*ft_strtrim(char const *s1, char const *set)
+
+## WRITE IN FILE DESCRIPTOR
+- [ft_putchar_fd.c](ft_putchar_fd.c)
+- [ft_putstr_fd.c](ft_putstr_fd.c)
+- [ft_putendl_fd.c](ft_putendl_fd.c)
+- [ft_putnbr_fd.c](ft_putnbr_fd.c)
+
+## CONVERSION
 - [ft_atoi.c](ft_atoi.c)
-## Memory 
+- [ft_itoa.c](ft_itoa.c)
+
+## MEMORY
 #### Manipulation
 - [ft_memset.c](ft_memset.c)
 - [ft_bzero.c](ft_bzero.c)
@@ -36,20 +53,7 @@
 - [ft_memcmp.c](ft_memcmp.c)
 #### Dynamic management
 - [ft_calloc.c](ft_calloc.c)
-## Aditional (parte 2 - Funciones adicionales)
-- [ft_strmapi.c](ft_strmapi.c)
-- [ft_putchar_fd.c](ft_putchar_fd.c)
-- [ft_putstr_fd.c](ft_putstr_fd.c)
-- [ft_putendl_fd.c](ft_putendl_fd.c)
-- [ft_putnbr_fd.c](ft_putnbr_fd.c)
-- [ft_striteri.c](ft_striteri.c)
-#### Conversion
-- [ft_itoa.c](ft_itoa.c)
-#### Manipulation
-- [ft_split.c](ft_split.c)
-- [ft_substr.c](ft_substr.c)
-- [ft_strjoin.c](ft_strjoin.c)
-- [ft_strtrim.c](ft_strtrim.c)
+
 ## LISTS (bonus)
 - [ft_lstnew.c](ft_lstnew.c)
 - [ft_lstadd_front.c](ft_lstadd_front.c)
