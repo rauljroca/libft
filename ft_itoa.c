@@ -6,7 +6,7 @@
 /*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 23:24:34 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/25 13:35:23 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/26 20:22:10 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static size_t	ft_len_nbr(long nb)
 
 	count = 0;
 	if (nb == 0)
-		return (++count);
+		return (1);
 	if (nb < 0 && ++count)
 		nb = nb * -1;
 	while (nb > 0 && ++count)
