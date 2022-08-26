@@ -25,10 +25,12 @@
 #### Manipulation
 - [ft_strlcpy.c](ft_strlcpy.c)
 - [ft_strlcat.c](ft_strlcat.c)
-- [ft_strdup.c](ft_strdup.c)
+- [ft_strdup.c](ft_strdup.c) - char	*ft_strdup(const char *s1)
+  <br>Utilice la función strdup para duplicar la cadena dada en C
 - [ft_strmapi.c](ft_strmapi.c) - char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 - [ft_striteri.c](ft_striteri.c) - void ft_striteri(char *s, void (*f)(unsigned int, char*))
 - [ft_substr.c](ft_substr.c) - char	*ft_substr(char const *s, unsigned int start, size_t len)
+  <br>Reserva (con malloc(3)) y devuelve una substring de la string ’s’.
 - [ft_strjoin.c](ft_strjoin.c) - char	*ft_strjoin(char const *s1, char const *s2)
 - [ft_strtrim.c](ft_strtrim.c) - char	*ft_strtrim(char const *s1, char const *set)
 
@@ -52,7 +54,8 @@
 - [ft_memchr.c](ft_memchr.c)
 - [ft_memcmp.c](ft_memcmp.c)
 #### Dynamic management
-- [ft_calloc.c](ft_calloc.c)
+- [ft_calloc.c](ft_calloc.c) - void	*ft_calloc(size_t count, size_t size)
+  <br>Automatically initialize the memory region with zero.
 
 ## LISTS (bonus)
 - [ft_lstnew.c](ft_lstnew.c)
