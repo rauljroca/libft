@@ -36,59 +36,30 @@
 - [ft_memcmp.c](ft_memcmp.c)
 #### Dynamic management
 - [ft_calloc.c](ft_calloc.c)
-## Aditional
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+## Aditional (parte 2 - Funciones adicionales)
+- [ft_strmapi.c](ft_strmapi.c)
+- [ft_putchar_fd.c](ft_putchar_fd.c)
+- [ft_putstr_fd.c](ft_putstr_fd.c)
+- [ft_putendl_fd.c](ft_putendl_fd.c)
+- [ft_putnbr_fd.c](ft_putnbr_fd.c)
+- [ft_striteri.c](ft_striteri.c)
 #### Conversion
-- []()
+- [ft_itoa.c](ft_itoa.c)
 #### Manipulation
-- []()
-- []()
-- []()
-- []()
+- [ft_split.c](ft_split.c)
+- [ft_substr.c](ft_substr.c)
+- [ft_strjoin.c](ft_strjoin.c)
+- [ft_strtrim.c](ft_strtrim.c)
 ## LISTS (bonus)
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-
-\
-			ft_substr.c \
-			ft_strjoin.c \
-			ft_strtrim.c \
-			ft_split.c \
-			ft_itoa.c \
-			ft_strmapi.c \
-			ft_striteri.c \
-			ft_putchar_fd.c \
-			ft_putstr_fd.c \
-			ft_putendl_fd.c \
-			ft_putnbr_fd.c
-
-SRCB	= ft_lstnew.c \
-			ft_lstadd_front.c \
-			ft_lstsize.c \
-			ft_lstlast.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c \
-			ft_lstclear.c \
-			ft_lstiter.c \
-			ft_lstmap.c
-
-
-
-
-
-
+- [ft_lstnew.c](ft_lstnew.c)
+- [ft_lstadd_front.c](ft_lstadd_front.c)
+- [ft_lstsize.c](ft_lstsize.c)
+- [ft_lstlast.c](ft_lstlast.c)
+- [ft_lstadd_back.c](ft_lstadd_back.c)
+- [ft_lstdelone.c](ft_lstdelone.c)
+- [ft_lstclear.c](ft_lstclear.c)
+- [ft_lstiter.c](ft_lstiter.c)
+- [ft_lstmap.c](ft_lstmap.c)
 
 ## INFO
 - [Subject](https://cdn.intra.42.fr/pdf/pdf/55911/es.subject.pdf)
