@@ -3,10 +3,13 @@
 ## INFO
 - [Subject](https://cdn.intra.42.fr/pdf/pdf/55911/es.subject.pdf)
 - [c08](https://youtu.be/ewtSjBQVdiM)
-- [diagrama](https://coggle.it/diagram/YK0nO2mu1V3F8Hug/t/libft-a)
-- [MAKIGAS - Tutorial de C](youtube.com/playlist?list=PLTd5ehIj0goOAWdpCpghXiRCmEOrJJLEW)
-- [MAKIGAS - Desarrollando en C](youtube.com/playlist?list=PLTd5ehIj0goMZ33qJ7JmuXjSO8RoefiZS)
-- [tópicos de programación](https://www.cs.utah.edu/~germain/PPS/Topics/index.html)
+- [Diagrama](https://coggle.it/diagram/YK0nO2mu1V3F8Hug/t/libft-a)
+- [Makigaz - Tutorial de C](youtube.com/playlist?list=PLTd5ehIj0goOAWdpCpghXiRCmEOrJJLEW)
+- [Makigaz - Desarrollando en C](youtube.com/playlist?list=PLTd5ehIj0goMZ33qJ7JmuXjSO8RoefiZS)
+- [Tópicos de programación](https://www.cs.utah.edu/~germain/PPS/Topics/index.html)
+- [Makigaz - Makefile](https://www.youtube.com/watch?v=L96rUUHfC78&list=PLMa9fq02Eqo-6-LRcDQ786lRYi7W3bW9i&index=4)
+- Otros: cplusplus.com, pythontutor, `killall -KILL a.out`
+- [Trabajar con varios repos](https://stackoverflow.com/questions/14290113/git-pushing-code-to-two-remotes)
 
 ## TESTS
 ### libft-war-machine
