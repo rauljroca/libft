@@ -82,7 +82,8 @@
 ## TESTS
 ### libft-war-machine
 https://github.com/y3ll0w42/libft-war-machine
-<br>Se copia como hermana de la carpeta libft y se corre con `bash grademe.sh`
+<br>Se clona como hermana de la carpeta libft
+<br>Se corre con `bash grademe.sh -b` sin bonus, `bash grademe.sh -ob` sólo bonus, ver más en README
 <br>Ver `deepthought` y `/tests`
 ### libft-unit-test
 https://github.com/alelievr/libft-unit-test
@@ -91,6 +92,7 @@ https://github.com/alelievr/libft-unit-test
 ### libftTester
 https://github.com/Tripouille/libftTester
 <br>`make m` (obligatorios) || `make b` (bonus) || `make a` (todos)
+<br>make [function name] ex: `make calloc` 
 
 
 
