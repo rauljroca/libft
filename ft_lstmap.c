@@ -6,7 +6,7 @@
 /*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 20:12:10 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/08/25 20:41:20 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/26 16:01:54 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,22 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (!lst || !f || !del)
-		return (lst);
+	t_list	*newlist;
+	t_list	*content;
+
+	newlist = NULL;
 	while (lst)
 	{
-		(*f)(lst->content);
-		del(lst->content);
+		content = ft_lstnew(f(lst->content));
+		if (!content)
+			ft_lstclear(&newlist, del);
+		else
+			ft_lstadd_back(&newlist, content);
 		lst = lst->next;
 	}
-	return (lst);
+	return (newlist);
 }
-
+/*
 #include <stdio.h>
 void the_function(f)
 {
@@ -40,14 +45,18 @@ int	main(void)
 	pntfn = *(the_function);
 	t_list lst;
 	t_list lst2;
+	t_list *lst3;
+
 	lst.next = &lst2;
-	lst.content = "001 ";
-	lst2.content = "002 ";
+	lst.content = "A";
+	lst2.content = "Z";
+
 	printf("content lst  %s \n", lst.content);
 	printf("content lst2 %s \n", lst2.content);
-	ft_lstmap(&lst, pntfn, the_function2);
+	lst3 = ft_lstmap(&lst, pntfn, the_function2);
+	printf("content lst  %s \n", lst3->content);
 }
-/*
+
 Parámetros
 lst: un puntero a un nodo.
 f: la dirección de un puntero a una función usada en la iteración de 
