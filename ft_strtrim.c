@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 19:21:47 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/06 21:51:46 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/28 00:55:21 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		while (ft_strchr(set, s1[dimension - 1]))
 			--dimension;
 	}
-	pointer = (void *)malloc(sizeof(char) * (dimension + 1));
+	pointer = (void *)ft_calloc(dimension + 1, sizeof(char));
 	if (!pointer)
 		return (NULL);
 	ft_strlcpy(pointer, s1, dimension + 1);

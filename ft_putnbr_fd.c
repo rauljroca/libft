@@ -6,13 +6,12 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 00:47:43 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/08 00:55:27 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/28 01:05:39 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
