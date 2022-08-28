@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 19:21:47 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/28 00:55:21 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/29 00:29:24 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (*s1 != '\0' && ft_strchr(set, *s1))
 		s1++;
 	dimension = ft_strlen(s1);
-	if (dimension > 0)
-	{
-		while (ft_strchr(set, s1[dimension - 1]))
-			--dimension;
-	}
+	while (ft_strchr(set, s1[dimension - 1]) && dimension)
+		--dimension;
 	pointer = (void *)ft_calloc(dimension + 1, sizeof(char));
 	if (!pointer)
 		return (NULL);
@@ -37,10 +34,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 #include <stdio.h>
 int	main(void)
 {
-	char *s1 = "BBsequeda!ABC";
+	char *s1 = "AAA¡Sequeda!ABC";
 	char *set = "ABC";
 	char *pnt = ft_strtrim(s1, set);
-	printf("ft_strjoin %s + %s = %s \n", s1, set, pnt);
+	printf("ft_strjoin %s - %s = %s \n", s1, set, pnt);
 }
 
 Valor devuelto
