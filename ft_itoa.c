@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 23:24:34 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/26 20:22:10 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/29 00:38:47 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static size_t	ft_len_nbr(long nb)
+static size_t	ft_length(long nb)
 {
 	size_t	count;
 
@@ -30,15 +30,15 @@ static size_t	ft_len_nbr(long nb)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	size_t	len;
+	size_t	length;
 	long	nb;
 
 	nb = n;
-	len = ft_len_nbr(nb);
-	str = malloc(sizeof(char) * len + 1);
+	length = ft_length(nb);
+	str = (void *)ft_calloc(length + 1, sizeof(char));
 	if (!str)
 		return (NULL);
-	str[len--] = '\0';
+	str[length--] = '\0';
 	if (n == 0)
 		str[0] = '0';
 	if (nb < 0)
@@ -48,9 +48,9 @@ char	*ft_itoa(int n)
 	}
 	while (nb > 0)
 	{
-		str[len] = (nb % 10) + '0';
+		str[length] = (nb % 10) + '0';
 		nb = nb / 10;
-		len--;
+		length--;
 	}
 	return (str);
 }
