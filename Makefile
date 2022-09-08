@@ -6,7 +6,7 @@
 #    By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/18 14:21:06 by rroca-go          #+#    #+#              #
-#    Updated: 2022/08/25 20:14:31 by rroca-go         ###   ########.fr        #
+#    Updated: 2022/09/08 21:06:28 by rroca-go         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,9 +90,3 @@ re:	fclean all
 
 .PHONY:	all clean fclean re bonus
 
-# crear biblioteca
-#ar rc libstr.a maintest.o test.o
-# compilar en biblioteca
-#gcc -Wall -Wectra -Werror maintes.o -L. -lstr
-# crear index en biblioteca
-#ranlib libstr.a
