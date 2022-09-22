@@ -6,7 +6,7 @@
 /*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 18:16:07 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/08/25 20:08:10 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/09/22 20:12:16 by rroca-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)
-		return;
+		return ;
 	while (lst)
 	{
 		(*f)(lst->content);
