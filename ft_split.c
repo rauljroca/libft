@@ -6,37 +6,33 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 21:35:30 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/08 00:02:23 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/28 00:48:21 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static size_t	ft_nmbrstr(const char *s, char c)
+static size_t	ft_breaks(const char *s, char c)
 {
 	size_t	i;
-	size_t	mark;
+	size_t	button;
 
 	i = 0;
-	mark = 0;
+	button = 0;
 	if (!s)
 		return (0);
 	while (*s != '\0')
 	{
 		if (*s == c)
-			mark = 0;
-		else if (mark == 0)
-		{
-			mark = 1;
-			i++;
-		}
+			button = 0;
+		else if (button == 0)
+			button = ++i;
 		s++;
 	}
 	return (i);
 }
 
-static size_t	ft_nmbrchr(const char *s, char c)
+static size_t	ft_nmbrchrs(const char *s, char c)
 {
 	size_t	i;
 
@@ -46,60 +42,52 @@ static size_t	ft_nmbrchr(const char *s, char c)
 	return (i);
 }
 
-static char	**ft_free(const char **split, size_t len_split)
-{
-	while (len_split--)
-		free((void *)split[len_split]);
-	free(split);
-	return (NULL);
-}
-
 char	**ft_split(const char *s, char c)
 {
-	char	**split;
-	size_t	len;
+	size_t	breaks;
 	size_t	i;
-	size_t	dimension;
+	char	**split;
+	size_t	nmbrchrs;
 
-	i = 0;
-	dimension = 0;
-	len = ft_nmbrstr(s, c);
-	split = (char **)malloc(sizeof(char *) * (len + 1));
+	breaks = ft_breaks(s, c);
+	split = (char **)ft_calloc(breaks + 1, sizeof(char *));
 	if (!split)
 		return (NULL);
-	while (i < len)
+	i = 0;
+	nmbrchrs = 0;
+	while (i < breaks)
 	{
 		while (*s == c)
 			s++;
-		dimension = ft_nmbrchr((const char *)s, c);
-		split[i] = (char *)malloc(sizeof(char) * dimension + 1);
+		nmbrchrs = ft_nmbrchrs((const char *)s, c);
+		split[i] = (char *)ft_calloc(nmbrchrs + 1, sizeof(char));
 		if (!split[i])
-			return (ft_free((const char **)split, len));
-		ft_strlcpy(split[i], s, dimension + 1);
-		s = (ft_strchr(s, (int)c));
+			free(split[i]);
+		ft_strlcpy(split[i], s, nmbrchrs + 1);
+		s = (ft_strchr(s, c));
 		i++;
 	}
 	split[i] = 0;
 	return (split);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	char **dest;
-	char P[] = "   hello word   ";
+	char P[] = "      split       this for   me  !       ";
 	char U = ' ';
 	size_t	i = 0;
 
-	printf("part = \n");
-
-	printf("%s \n \n ", P);
-	printf("%c \n \n ", U);
+	printf("MAIN - P = %s \n", P);
+	printf("MAIN - U = %c \n", U);
 	dest = ft_split(P, U);
-
-	printf("part = %zu -> %c \n", i, **dest);
-
-	while (dest[i++])
-		printf("part = %zu -> %s \n", i, dest[i]);
+	while (dest[i])
+	{
+		printf("MAIN - %zu -> %s \n", i, dest[i]);
+		i++;
+	}
+	return (0);
 }
 
 Valor devuelto

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 18:44:37 by rroca-go          #+#    #+#             */
-/*   Updated: 2022/07/30 19:38:00 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/28 01:03:19 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -22,7 +21,7 @@ char	*ft_strdup(const char *s1)
 	count = 0;
 	while (*(s1 + count))
 		count++;
-	str = (char *)malloc(sizeof(*s1) * (count + 1));
+	str = (char *)ft_calloc(count + 1, sizeof(*s1));
 	if (!str)
 		return (NULL);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 20:12:31 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/01 19:38:11 by rroca-go@st      ###   ########.fr       */
+/*   Updated: 2022/08/28 01:01:03 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	ptr = malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char) + 1);
+	ptr = (void *)ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (!ptr)
 		return (NULL);
 	i = 0;

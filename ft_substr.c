@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rroca-go <rroca-go@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rroca-go@student.42madrid.com <rroca-go    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 14:24:19 by rroca-go@st       #+#    #+#             */
-/*   Updated: 2022/08/06 21:34:52 by rroca-go         ###   ########.fr       */
+/*   Updated: 2022/08/28 00:53:46 by rroca-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -27,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dimension -= start;
 	if (dimension > len)
 		dimension = len;
-	pointer = (void *)malloc(sizeof(char) * (dimension + 1));
+	pointer = (void *)ft_calloc(dimension + 1, sizeof(char));
 	if (!pointer)
 		return (NULL);
 	len = dimension;
