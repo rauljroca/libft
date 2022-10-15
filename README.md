@@ -58,7 +58,7 @@
   <br>Automatically initialize the memory region with zero.
 
 ## LISTS (bonus)
-- [ft_lstnew.c](ft_lstnew.c)
+- [ft_lstnew.c](ft_lstnew.c) [KO] - Could not compile
 - [ft_lstadd_front.c](ft_lstadd_front.c)
 - [ft_lstsize.c](ft_lstsize.c)
 - [ft_lstlast.c](ft_lstlast.c)
@@ -66,14 +66,14 @@
 - [ft_lstdelone.c](ft_lstdelone.c)
 - [ft_lstclear.c](ft_lstclear.c)
 - [ft_lstiter.c](ft_lstiter.c)
-- [ft_lstmap.c](ft_lstmap.c)
+- [ft_lstmap.c](ft_lstmap.c) [KO] - Could not compile
 
 ## INFO
 - [Subject](https://cdn.intra.42.fr/pdf/pdf/55911/es.subject.pdf)
 - [c08](https://youtu.be/ewtSjBQVdiM)
 - [Diagrama](https://coggle.it/diagram/YK0nO2mu1V3F8Hug/t/libft-a)
-- [Makigaz - Tutorial de C](youtube.com/playlist?list=PLTd5ehIj0goOAWdpCpghXiRCmEOrJJLEW)
-- [Makigaz - Desarrollando en C](youtube.com/playlist?list=PLTd5ehIj0goMZ33qJ7JmuXjSO8RoefiZS)
+- [Makigaz - Tutorial de C](https://youtube.com/playlist?list=PLTd5ehIj0goOAWdpCpghXiRCmEOrJJLEW)
+- [Makigaz - Desarrollando en C](https://youtube.com/playlist?list=PLTd5ehIj0goMZ33qJ7JmuXjSO8RoefiZS)
 - [Tópicos de programación](https://www.cs.utah.edu/~germain/PPS/Topics/index.html)
 - [Makigaz - Makefile](https://www.youtube.com/watch?v=L96rUUHfC78&list=PLMa9fq02Eqo-6-LRcDQ786lRYi7W3bW9i&index=4)
 - Otros: cplusplus.com, pythontutor, `killall -KILL a.out`
